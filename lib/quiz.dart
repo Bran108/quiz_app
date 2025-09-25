@@ -9,9 +9,15 @@ class Quiz extends StatefulWidget{
     return _QuizState();
 
   }
+  
 }
 class _QuizState extends State<Quiz>{
-var activeScreen = StartScreen(switchScreen);
+Widget? activeScreen;
+@override
+  void initState() {
+    activeScreen = StartScreen(switchScreen);
+    super.initState();
+  }
 void switchScreen(){
   setState(
     (){
@@ -20,7 +26,7 @@ void switchScreen(){
   );
 }
 
-  Widget build(BuildContext context){
+  Widget build(BuildContext context){ 
   return MaterialApp(
     home: Scaffold(
         body: Container(
@@ -32,7 +38,7 @@ void switchScreen(){
               ]
             ),
           ),
-          child: const StartScreen()
+          child: activeScreen,
         ),
       ),
     );
