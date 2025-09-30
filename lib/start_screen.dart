@@ -28,7 +28,7 @@ class StartScreen extends StatelessWidget {
             height: 30,
           ),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
