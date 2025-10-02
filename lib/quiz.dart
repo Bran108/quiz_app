@@ -22,7 +22,9 @@ void chooseAnswer(String answer){
   if(selectedAnswers.length == questions.length){
     setState((){
       // selectedAnswers = [];
-      activeScreen = StartScreen(switchScreen);
+      activeScreen = ResultsScreen(
+        choosenAnswers : selectedAnswers,
+      );
     });
   }
 }
