@@ -42,7 +42,7 @@ final summaryData = getSummaryData();
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
-            Text('You answered $numCorrectQuestions out of $numTotalQuestions questions Correctly'),
+            Text('You answered $numCorrectQuestions out of $numTotalQuestions questions correctly'),
             const SizedBox(height:30,),
             const Text('List of Answers and Questions'),
             //'loop' through choosenAnswers and do something with it

@@ -11,8 +11,16 @@ class QuestionsSummary extends StatelessWidget{
       children: summaryData.map((data) {
         return Row(
           children: [
-          Text(((data['question_index'] as int) 
-          + 1).toString()),
+            CircleAvatar(
+              backgroundColor: (data['correct_answer'] == data['user_answer'])
+              ? Colors.lightBlue
+              : const Color.fromARGB(255, 226, 62, 207),
+          child: Text(((data['question_index'] as int) 
+          + 1).toString(),
+          style: const TextStyle(
+            fontSize: 22,
+          )),
+            ),
           Expanded(
             child: Column(
               children:[
@@ -22,12 +30,12 @@ class QuestionsSummary extends StatelessWidget{
                 ),
                 Text(data['correct_answer'] as String,
                 style: TextStyle(
-                  color: Colors.pink
+                  color: const Color.fromARGB(255, 226, 62, 207)
                 ),
                 ),
                 Text(data['user_answer'] as String,
                 style: TextStyle(
-                  color: Colors.teal
+                  color: Colors.lightBlue
                 ),
                 ),
               ],
