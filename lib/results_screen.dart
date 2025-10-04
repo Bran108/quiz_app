@@ -42,9 +42,19 @@ final summaryData = getSummaryData();
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
-            Text('You answered $numCorrectQuestions out of $numTotalQuestions questions correctly'),
+            Text('You answered $numCorrectQuestions out of $numTotalQuestions questions correctly',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+            ),
             const SizedBox(height:30,),
-            const Text('List of Answers and Questions'),
+            const Text('List of Answers and Questions',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+            ),
             //'loop' through choosenAnswers and do something with it
             const SizedBox(height:30,
             ),
@@ -54,7 +64,12 @@ final summaryData = getSummaryData();
             ),
             TextButton(
               onPressed: (){},
-              child: const Text('Restart Quiz'),
+              child: const Text('Restart Quiz',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                ),
+              ),
             )
           ],
         ),

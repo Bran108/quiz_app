@@ -24,18 +24,25 @@ class QuestionsSummary extends StatelessWidget{
           Expanded(
             child: Column(
               children:[
-              Text(data['question'] as String),
+              Text(data['question'] as String,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),
+              ),
               const SizedBox(
                 height: 5,
                 ),
                 Text(data['correct_answer'] as String,
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 226, 62, 207)
+                  color: const Color.fromARGB(255, 226, 62, 207),
+                  fontSize: 16,
                 ),
                 ),
                 Text(data['user_answer'] as String,
                 style: TextStyle(
-                  color: Colors.lightBlue
+                  color: Colors.lightBlue,
+                  fontSize: 16,
                 ),
                 ),
               ],
