@@ -21,9 +21,9 @@ void chooseAnswer(String answer){
   selectedAnswers.add(answer);
   if(selectedAnswers.length == questions.length){
     setState((){
-      // selectedAnswers = [];
       activeScreen = ResultsScreen(
         choosenAnswers : selectedAnswers,
+        onRestart: resetQuiz,
       );
     });
   }
@@ -42,6 +42,13 @@ void switchScreen(){
       );
     });
   }
+
+void resetQuiz(){
+  setState((){
+    selectedAnswers = [];
+    activeScreen = StartScreen(switchScreen);
+  });
+}
 
   Widget build(BuildContext context){ 
   return MaterialApp(
